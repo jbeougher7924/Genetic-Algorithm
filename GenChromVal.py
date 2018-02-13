@@ -267,8 +267,8 @@ def checkOptString():
     print "Starting parallel python with", job_server.get_ncpus(), "workers"
     print "*********************\n"
     ProgConstant = ShareConstant()
-    ProgConstant.POP_SIZE = 300
-    ProgConstant.CHROMO_LENGTH = 3000
+    ProgConstant.POP_SIZE = 3000
+    ProgConstant.CHROMO_LENGTH = 30000
     ConstPrint(ProgConstant)
 
     chromo_list = []
@@ -328,7 +328,7 @@ def main():
             strPrint("Current generation: ", GenerationsRequiredToFindASolution)
 
             TotalFitness = 0.0
-            foundIndex = -1;
+            foundIndex = -1
 
             #assignFit_jobs = [(job_server.submit(AssignFitness, (chromo_list[i].bits,Target,ProgConstant,),  (ChromoTyp,ParseBits,BinToDec,calcResult,ShareConstant,), ("random","math",))) for i in range(POP_SIZE)]
             #jobCount = 0
